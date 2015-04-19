@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<rss version="0.91">
+  <channel>
+    <title>Spring Boot Configuration Properties Support - Checkstyle report</title>
+    <link>${project.url}</link>
+    <description>Spring Boot Configuration Properties Support - Checkstyle report</description>
+    <language>en-us</language>
+    <copyright>&#169;2015 Keevosh ULP</copyright>
+    <item>
+      <title>File: 3,
+             Errors: 123,
+             Warnings: 0,
+             Infos: 0
+      </title>
+            <link>${project.url}/checkstyle.html</link>
+      <description>
+        <p>Click <a href="${project.url}/checkstyle.html">here</a> for the full Checkstyle report.</p>
+
+        <table summary="Files" boder="1">
+          <thead>
+            <tr>
+              <th>Files</th>
+              <th style="width:30px;"><abbr title="Info">I</abbr></th>
+              <th style="width:30px;"><abbr title="Warning">W</abbr></th>
+              <th style="width:30px;"><abbr title="Error">E</abbr></th>
+            </tr>
+          </thead>
+          <tbody>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#com.keevosh.springframework.boot.netbeans.SpringBootConfigurationCompletionItem.java">com/keevosh/springframework/boot/netbeans/SpringBootConfigurationCompletionItem.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  65
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#com.keevosh.springframework.boot.netbeans.SpringBootConfigurationCompletionProvider.java">com/keevosh/springframework/boot/netbeans/SpringBootConfigurationCompletionProvider.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  35
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#com.keevosh.springframework.boot.netbeans.SpringBootConfigurationCompletionDocumentation.java">com/keevosh/springframework/boot/netbeans/SpringBootConfigurationCompletionDocumentation.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  23
+                </td>
+              </tr>
+                      </tbody>
+        </table>
+        
+      </description>
+    </item>
+  </channel>
+</rss>
+
