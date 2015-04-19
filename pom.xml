@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.keevosh</groupId>
+    <artifactId>nb-springboot-configuration-support</artifactId>
+    <name>Spring Boot Configuration Properties Support</name>
+    <version>1.0.0.RELEASE</version>
+    <packaging>nbm</packaging>
+
+    <organization>
+        <name>Keevosh ULP</name>
+        <url>http://www.keevosh.com</url>
+    </organization>
+
+    <licenses>
+        <license>
+            <name>Apache 2</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+            <comments>
+                A business-friendly OSS license. It's also the license of
+                Spring framework itself.
+            </comments>
+        </license>
+    </licenses>
+
+    <inceptionYear>2015</inceptionYear>
+
+    <developers>
+        <developer>
+            <id>mehiel</id>
+            <name>Aggelos Karalias</name>
+            <email>aggelos.karalias@gmail.com</email>
+            <url>https://linkedin.com/in/akaralias</url>
+            <organization>Keevosh</organization>
+            <organizationUrl>http://www.keevosh.com</organizationUrl>
+            <roles>
+                <role>founder</role>
+                <role>developer</role>
+            </roles>
+            <timezone>+2</timezone>
+        </developer>
+    </developers>
+
+    <scm>
+        <url>https://github.com/keevosh/nb-springboot-configuration-support</url>
+		<connection>scm:git:git://github.com/keevosh/nb-springboot-configuration-support.git</connection>
+		<developerConnection>scm:git:git@github.com:keevosh/nb-springboot-configuration-support.git</developerConnection>
+    </scm>
+
+    <issueManagement>
+		<url>https://github.com/keevosh/nb-springboot-configuration-support/issues</url>
+		<system>GitHub Issues</system>
+	</issueManagement>
+
+    <properties>
+        <plugins.nbm.version>3.13</plugins.nbm.version>
+        <plugins.compiler.version>2.5.1</plugins.compiler.version>
+        <plugins.jar.version>2.4</plugins.jar.version>
+        <plugins.javadoc.version>2.10.1</plugins.javadoc.version>
+        <plugins.source.version>2.4</plugins.source.version>
+        <plugins.ghdownloads.version>0.6</plugins.ghdownloads.version>
+        <plugins.ghsite.version>0.10</plugins.ghsite.version>
+        <plugins.site.version>3.4</plugins.site.version>
+        <plugins.projectinfo.version>2.2</plugins.projectinfo.version>
+        <plugins.surefire.version>2.6</plugins.surefire.version>
+        <plugins.checkstyle.version>2.6</plugins.checkstyle.version>
+
+        <netbeans.api.version>RELEASE80</netbeans.api.version>
+        <spring.version>1.2.3.RELEASE</spring.version>
+
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>nbm-maven-plugin</artifactId>
+                <version>${plugins.nbm.version}</version>
+                <extensions>true</extensions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${plugins.compiler.version}</version>
+                <configuration>
+                    <source>1.6</source>
+                    <target>1.6</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>${plugins.jar.version}</version>
+                <configuration>
+                    <useDefaultManifestFile>true</useDefaultManifestFile>
+                </configuration>
+            </plugin>
+            <!--plugin>
+				<groupId>com.github.github</groupId>
+				<artifactId>downloads-maven-plugin</artifactId>
+				<version>${plugins.ghdownloads.version}</version>
+				<configuration>
+					<description>Official ${project.name} build of the ${project.version} release</description>
+					<override>true</override>
+					<includeAttached>true</includeAttached>
+					<server>github</server>
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>upload</goal>
+						</goals>
+						<phase>install</phase>
+					</execution>
+				</executions>
+			</plugin-->
+			<plugin>
+				<groupId>com.github.github</groupId>
+				<artifactId>site-maven-plugin</artifactId>
+				<version>${plugins.ghsite.version}</version>
+				<configuration>
+					<message>Building site for ${project.version}</message>
+					<server>github</server>
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>site</goal>
+						</goals>
+						<phase>site</phase>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-site-plugin</artifactId>
+				<version>${plugins.site.version}</version>
+				<configuration>
+					<reportPlugins>
+						<plugin>
+							<groupId>org.apache.maven.plugins</groupId>
+							<artifactId>maven-project-info-reports-plugin</artifactId>
+							<version>${plugins.projectinfo.version}</version>
+							<configuration>
+								<dependencyDetailsEnabled>true</dependencyDetailsEnabled>
+								<dependencyLocationsEnabled>true</dependencyLocationsEnabled>
+							</configuration>
+						</plugin>
+						<plugin>
+							<groupId>org.apache.maven.plugins</groupId>
+							<artifactId>maven-javadoc-plugin</artifactId>
+							<version>${plugins.javadoc.version}</version>
+						</plugin>
+						<plugin>
+							<groupId>org.apache.maven.plugins</groupId>
+							<artifactId>maven-surefire-report-plugin</artifactId>
+							<version>${plugins.surefire.version}</version>
+						</plugin>
+						<plugin>
+							<groupId>org.apache.maven.plugins</groupId>
+							<artifactId>maven-checkstyle-plugin</artifactId>
+							<version>${plugins.checkstyle.version}</version>
+						</plugin>
+					</reportPlugins>
+				</configuration>
+			</plugin>
+            <plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+                <version>${plugins.javadoc.version}</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+                <version>${plugins.source.version}</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+        </plugins>
+    </build>
+
+    <repositories>
+        <!-- Add NetBeans modules maven repository -->
+        <repository>
+            <id>netbeans</id>
+            <name>Repository hosting NetBeans modules</name>
+            <url>http://bits.netbeans.org/nexus/content/groups/netbeans</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+
+        <!-- Add spring.io maven repository -->
+        <repository>
+            <id>spring-snapshots</id>
+            <url>http://repo.spring.io/snapshot</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
+    <dependencies>
+        <!--
+            NetBeans Module Dependencies. We depend on:
+
+            Editor Code Completion API
+            ClassPath API
+            File System API
+            Nodes API
+            Window System API
+            Utilities API
+            Lookup API
+            Datasystems API
+            Common Annotations API
+        -->
+        <dependency>
+            <groupId>org.netbeans.api</groupId>
+            <artifactId>org-netbeans-api-annotations-common</artifactId>
+            <version>${netbeans.api.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.netbeans.api</groupId>
+            <artifactId>org-netbeans-modules-editor-completion</artifactId>
+            <version>${netbeans.api.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.netbeans.api</groupId>
+            <artifactId>org-netbeans-api-java-classpath</artifactId>
+            <version>${netbeans.api.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.netbeans.api</groupId>
+            <artifactId>org-openide-filesystems</artifactId>
+            <version>${netbeans.api.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.netbeans.api</groupId>
+            <artifactId>org-openide-windows</artifactId>
+            <version>${netbeans.api.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.netbeans.api</groupId>
+            <artifactId>org-openide-nodes</artifactId>
+            <version>${netbeans.api.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.netbeans.api</groupId>
+            <artifactId>org-openide-loaders</artifactId>
+            <version>${netbeans.api.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.netbeans.api</groupId>
+            <artifactId>org-openide-util</artifactId>
+            <version>${netbeans.api.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.netbeans.api</groupId>
+            <artifactId>org-openide-util-lookup</artifactId>
+            <version>${netbeans.api.version}</version>
+        </dependency>
+
+        <!--
+            Spring Boot Dependencies. We depend on:
+
+            Spring Boot Configuration Processor
+                + org.json
+                - commons-logging
+                - spring-core
+            Spring Boot
+                - spring-aop
+                - spring-beans
+                - spring-context
+                - spring-core
+
+            We get a dependency on boot's configuration processor in order to
+            use its object model for configuration metadata and the json
+            marshaller. So we keep its json dep but we exclude everything else
+            as they are not needed.
+
+            We normally don't need spring-boot either but the configuration
+            processor has a META-INF/services javax.annotation Processor that
+            scans for classes annotated with
+            org.springframework.boot.context.properties.ConfigurationProperties
+            so we have 4 options here:
+                1. add the dependency to the module (this is what we do), but
+                   exclude and transitive dependency as they are not needed.
+                2. hack the dependency to remove the META-INF/services from
+                   jar. But this will make it hard for other developers to
+                   get the project and just compile/run it
+                3. run javac with the -proc:none compiler argument, but this is
+                   not viable either because several netbeans modules (like the
+                   Common Annotations API) use this mechanism too
+                4. run javac with -proc:none and enable the maven-process-plugin
+                   to do the annotations processing, but this is also not viable
+                   because they just give an option to whitelist processors so
+                   we must know every required processor from netbeans API or
+                   any other dependency which is a pain again for other devs
+
+            So we pay the cost of bringing in the npm the spring-boot.jar. We
+            could probably configure the nbm packaging to have a way to
+            exclude dependencies from the final package but this is left as a
+            task for a future version.
+        -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <version>${spring.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>commons-logging</groupId>
+                    <artifactId>commons-logging</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.springframework</groupId>
+                    <artifactId>spring-core</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot</artifactId>
+            <version>${spring.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.springframework</groupId>
+                    <artifactId>spring-aop</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.springframework</groupId>
+                    <artifactId>spring-beans</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.springframework</groupId>
+                    <artifactId>spring-context</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.springframework</groupId>
+                    <artifactId>spring-core</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+    </dependencies>
+</project>
