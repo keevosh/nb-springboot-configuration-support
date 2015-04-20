@@ -53,7 +53,7 @@ import org.springframework.boot.configurationprocessor.metadata.JsonMarshaller;
  * ConfigurationMetadata} classes and later in the query task scans for
  * items and fills the {@link CompletionResultSet}.
  *
- * @author Aggelos Karalias <aggelos.karalias at gmail.com>
+ * @author Aggelos Karalias &lt;aggelos.karalias at gmail.com&gt;
  */
 @MimeRegistration(mimeType = "text/x-properties", service = CompletionProvider.class)
 public class SpringBootConfigurationCompletionProvider implements CompletionProvider {

@@ -44,7 +44,7 @@ import org.springframework.boot.configurationprocessor.metadata.ItemMetadata;
  * It utilizes an ItemMetadata and the project classpath to render the
  * completion item and support the documentation.
  *
- * @author Aggelos Karalias <aggelos.karalias at gmail.com>
+ * @author Aggelos Karalias &lt;aggelos.karalias at gmail.com&gt;
  */
 public class SpringBootConfigurationCompletionItem  implements CompletionItem {
 

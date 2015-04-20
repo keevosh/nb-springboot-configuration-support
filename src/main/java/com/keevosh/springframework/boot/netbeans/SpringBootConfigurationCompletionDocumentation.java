@@ -37,7 +37,7 @@ import org.springframework.boot.configurationprocessor.metadata.ItemMetadata;
  * a property in editor and navigate to a general spring boot configuration
  * documentation page.
  *
- * @author Aggelos Karalias <aggelos.karalias at gmail.com>
+ * @author Aggelos Karalias &lt;aggelos.karalias at gmail.com&gt;
  */
 public class SpringBootConfigurationCompletionDocumentation implements CompletionDocumentation {
 
