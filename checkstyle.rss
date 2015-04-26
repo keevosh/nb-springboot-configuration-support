@@ -2,9 +2,9 @@
 
 <rss version="0.91">
   <channel>
-    <title>Spring Boot Configuration Properties Support - Checkstyle report</title>
-    <link>${project.url}</link>
-    <description>Spring Boot Configuration Properties Support - Checkstyle report</description>
+    <title>Spring Boot Configuration Support - Checkstyle report</title>
+    <link>http://keevosh.github.io/nb-springboot-configuration-support/</link>
+    <description>Spring Boot Configuration Support - Checkstyle report</description>
     <language>en-us</language>
     <copyright>&#169;2015 Keevosh ULP</copyright>
     <item>
@@ -13,9 +13,9 @@
              Warnings: 0,
              Infos: 0
       </title>
-            <link>${project.url}/checkstyle.html</link>
+            <link>http://keevosh.github.io/nb-springboot-configuration-support//checkstyle.html</link>
       <description>
-        <p>Click <a href="${project.url}/checkstyle.html">here</a> for the full Checkstyle report.</p>
+        <p>Click <a href="http://keevosh.github.io/nb-springboot-configuration-support//checkstyle.html">here</a> for the full Checkstyle report.</p>
 
         <table summary="Files" boder="1">
           <thead>
@@ -29,7 +29,7 @@
           <tbody>
                           <tr>
                 <td>
-                  <a href="${project.url}/checkstyle.html#com.keevosh.springframework.boot.netbeans.SpringBootConfigurationCompletionItem.java">com/keevosh/springframework/boot/netbeans/SpringBootConfigurationCompletionItem.java</a>
+                  <a href="http://keevosh.github.io/nb-springboot-configuration-support//checkstyle.html#com.keevosh.springframework.boot.netbeans.SpringBootConfigurationCompletionItem.java">com/keevosh/springframework/boot/netbeans/SpringBootConfigurationCompletionItem.java</a>
                 </td>
                 <td>
                   0
@@ -43,7 +43,7 @@
               </tr>
                           <tr>
                 <td>
-                  <a href="${project.url}/checkstyle.html#com.keevosh.springframework.boot.netbeans.SpringBootConfigurationCompletionProvider.java">com/keevosh/springframework/boot/netbeans/SpringBootConfigurationCompletionProvider.java</a>
+                  <a href="http://keevosh.github.io/nb-springboot-configuration-support//checkstyle.html#com.keevosh.springframework.boot.netbeans.SpringBootConfigurationCompletionProvider.java">com/keevosh/springframework/boot/netbeans/SpringBootConfigurationCompletionProvider.java</a>
                 </td>
                 <td>
                   0
@@ -57,7 +57,7 @@
               </tr>
                           <tr>
                 <td>
-                  <a href="${project.url}/checkstyle.html#com.keevosh.springframework.boot.netbeans.SpringBootConfigurationCompletionDocumentation.java">com/keevosh/springframework/boot/netbeans/SpringBootConfigurationCompletionDocumentation.java</a>
+                  <a href="http://keevosh.github.io/nb-springboot-configuration-support//checkstyle.html#com.keevosh.springframework.boot.netbeans.SpringBootConfigurationCompletionDocumentation.java">com/keevosh/springframework/boot/netbeans/SpringBootConfigurationCompletionDocumentation.java</a>
                 </td>
                 <td>
                   0
