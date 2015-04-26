@@ -4,9 +4,11 @@
 
     <groupId>com.keevosh</groupId>
     <artifactId>nb-springboot-configuration-support</artifactId>
-    <name>Spring Boot Configuration Properties Support</name>
-    <version>1.0.0.RELEASE</version>
+    <version>1.0</version>
     <packaging>nbm</packaging>
+
+    <name>Spring Boot Configuration Support</name>
+    <url>http://keevosh.github.io/nb-springboot-configuration-support/</url>
 
     <organization>
         <name>Keevosh ULP</name>
@@ -63,7 +65,7 @@
         <plugins.ghdownloads.version>0.6</plugins.ghdownloads.version>
         <plugins.ghsite.version>0.10</plugins.ghsite.version>
         <plugins.site.version>3.4</plugins.site.version>
-        <plugins.projectinfo.version>2.2</plugins.projectinfo.version>
+        <plugins.projectinfo.version>2.8</plugins.projectinfo.version>
         <plugins.surefire.version>2.6</plugins.surefire.version>
         <plugins.checkstyle.version>2.6</plugins.checkstyle.version>
 
@@ -122,6 +124,7 @@
 				<artifactId>site-maven-plugin</artifactId>
 				<version>${plugins.ghsite.version}</version>
 				<configuration>
+                    <skip>${skipGithubSite}</skip>
 					<message>Building site for ${project.version}</message>
 					<server>github</server>
 				</configuration>
@@ -144,6 +147,18 @@
 							<groupId>org.apache.maven.plugins</groupId>
 							<artifactId>maven-project-info-reports-plugin</artifactId>
 							<version>${plugins.projectinfo.version}</version>
+                            <reportSets>
+                                <reportSet>
+                                    <id>default</id>
+                                    <reports>
+                                        <report>project-team</report>
+                                        <report>scm</report>
+                                        <report>issue-tracking</report>
+                                        <report>license</report>
+                                        <report>dependencies</report>
+                                    </reports>
+                                </reportSet>
+                            </reportSets>
 							<configuration>
 								<dependencyDetailsEnabled>true</dependencyDetailsEnabled>
 								<dependencyLocationsEnabled>true</dependencyLocationsEnabled>

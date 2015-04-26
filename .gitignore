@@ -9,4 +9,4 @@ dependency-reduced-pom.xml
 buildNumber.properties
 
 # Netbeans files
-nb*
+/nb*
